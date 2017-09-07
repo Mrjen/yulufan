@@ -1,0 +1,11 @@
+<!--pages/InputExpend/InputExpend.wxml-->
+<scroll-view  class="container"  scroll-y="true"  bindscrolltolower="pageBottom">
+    <view class="list_item"  wx:for="{{MoneyList}}">
+       <view class="item_left">
+           <view>{{item.stream_name}}</view>
+           <view>{{item.create_time}}</view>
+       </view>
+       <view class="money" style="color:{{item.amount>0?'#24bd87':'#ff5357'}}">{{item.amount}}</view>
+    </view>
+    <view class="more_data" wx:if="{{moreData}}">没有更多数据了</view>
+</scroll-view>

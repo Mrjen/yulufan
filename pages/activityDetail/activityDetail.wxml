@@ -1,0 +1,17 @@
+<!--pages/activityDetail/activityDetail.wxml-->
+<view class="container">
+  <view class="detail_wrap">
+    <view class="detail_title">{{active.title}}</view>
+    <view class="detail_con">{{active.content}}</view>
+  </view>
+  <view class="detail_time">活动时间</view>
+  <view class="detail_wrap">
+    <view class="detail_con">从{{active.begin_time}}至{{active.end_time}}</view>
+  </view>
+  <view class="detail_time">参与方式</view>
+  <view class="detail_wrap">
+    <block wx:for="{{active.pattern}}">
+      <view class="detail_con">{{item}}</view>
+    </block>
+  </view>
+</view>

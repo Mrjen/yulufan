@@ -1,0 +1,25 @@
+<!--pages/myMoney/myMoney.wxml-->
+<view class="container">
+    <view class="money">{{myMoney}}</view>
+    <view class="money_tip">账户余额</view>
+    <view class="get_money"><view>输入提现金额：</view><input type="number" bindinput="MoneyInput" placeholder="0"/>元</view>
+    <view class="get_tip get_tip1" wx:if="{{getMoney>0}}">微信平台额外扣除￥{{Fee}}手续费，</view>
+    <!-- 实际到账￥{{Cash}} -->
+     <view class="up_img_box">
+      <view class="upMoneyImg" bindtap="upMoneyImg">点击上传微信收款二维码</view>
+      <navigator url="../guidePage/guidePage" class="quest">?</navigator>
+     </view> 
+
+     <view class="ercode_box">
+      <image bindtap="prewCode" data-src="{{MoneyImg}}" class="ercode" mode="widthFix" src="{{MoneyImg}}">
+      </image>
+     </view> 
+
+    <view class="get_tip">温馨提示：最低提现金额为10元，上不封顶，每次提现将收取5%的微信平台手续费</view>
+    <view class="get_money_box">
+        <view class="get_money_btn" bindtap="GetMonyBtn">提现到微信零钱</view>
+         <!-- <view class="money_help"></view>  -->
+    </view>
+    <navigator  class="input_or_output"  url="../InputExpend/InputExpend" hover-class="none">收支明细</navigator>
+    <view class="zhanwei"></view>
+</view>

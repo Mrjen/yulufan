@@ -1,0 +1,61 @@
+<!--pages/activity/activity.wxml-->
+<view class="container">
+  <view class="image_wrap">
+     <image src="{{active.activity_img}}"></image> 
+  </view>
+
+  <view class="navi_torule" bindtap="toActive">
+    <view class="activity_rule">{{active.description}}</view>
+    <view class="activity_rule2">小范{{active.add_time}}发布</view>
+    <view class="arrow"></view>
+  </view>
+
+  <view class="tab_wrap">
+    <view class="tab_nav" >
+      {{matchOpus.wx_name}}当前排名第{{matchOpus.sort}}名
+    </view>
+  </view>
+
+  <view class="activity_con">
+    <view class="yulu_item">
+      <view class="vote_wrap">
+        <view>为ta投上一票呗！</view>
+        <view></view>
+      </view>
+      <view class="persion_info">
+        <image src="{{matchOpus.avatarurl}}"></image>
+          <view class="persion_name">
+            <text>{{matchOpus.wx_name}}</text>
+            <text class="yulu_time">{{matchOpus.add_time}}</text>
+          </view>
+      </view>
+
+      <view class="yulu_img">
+        <image bindtap="toDetail" src="{{matchOpus.picture}}" mode="widthFix"></image>
+      </view>
+      <text class="yu_text" bindtap="toDetail">{{matchOpus.content}}</text>
+      <view class="info_box">
+        <view class="bottom_bar">
+          <view class="like_box">
+            <block>
+              <view class="has_like" data-oid="{{matchOpus.oid}}" bindtap="likeYuLu" wx:if="{{matchOpus.isZan}}"></view>
+              <view class="like_btn" data-oid="{{matchOpus.oid}}" bindtap="unLikeYuLu" wx:else></view>
+            </block>
+            赞{{matchOpus.thumb}}
+          </view>
+          <view class="opation_box">
+            <view class="vote_btn" bindtap="vote" wx:if="{{!active.is_vote}}">投票</view>
+            <view class="vote_btn vote_hover" wx:else>已投票</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="btn_desc">凭老娘的智慧与美貌，不参赛简直是一大遗憾</view>
+    
+  </view>
+
+  <view class="btn_warp">
+    
+    <view class="btn_join" bindtap="joinActive">我也要参赛</view>
+  </view>
+</view>

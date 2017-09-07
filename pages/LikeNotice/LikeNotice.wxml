@@ -1,0 +1,30 @@
+<!--pages/LikeNotice/LikeNotice.wxml-->
+<scroll-view scroll-y="true" class="container"  bindscrolltolower="pageBottom">
+    <navigator  url="/page/navigate/navigate?title=navigate" hover-class="none" wx:for="{{myWorks}}" class="works_item">
+      <view class="persion_info">
+              <image class="persion_img" src="{{item.avatarurl}}"></image>
+              <view class="persion_info_right">
+                  <view class="persion_name">
+                        <view>{{item.wx_name}}</view>
+                        <block>
+                        <view wx:if="{{item.notice_type==0}}">喜欢了你</view>
+                        <view wx:else="">打赏了你</view>
+                        </block>
+                  </view>
+                  <view class="persion_time">{{item.thumb_time}}</view>
+              </view>
+      </view>
+      <view class="main_content">
+         <view class="img_box"><image class="yulu_img" mode="widthFix" src="{{item.picture}}"></image></view>
+         <view class="works_right">
+             <view class="yulu_text">{{item.content}}</view>
+             <view class="opation_box">
+                <view>{{item.thumb}}人喜欢</view>
+                <view class="money_box" wx:if="{{item.reward_amount>0}}">
+                  <view class="money_icon"></view>赏：{{item.reward_amount}}元
+                </view>
+             </view>
+         </view>
+       </view>
+    </navigator>
+</scroll-view>

@@ -1,0 +1,100 @@
+<!--pages/activity/activity.wxml-->
+<view class="container">
+ <scroll-view scroll-y="true" bindscrolltolower="bottom"> 
+  <view class="image_wrap">
+     <image src="{{active.activity_img}}"></image> 
+  </view>
+
+  <view class="navi_torule" bindtap="toRule">
+    <view class="activity_rule">{{active.description}}</view>
+    <view class="activity_rule2">小范{{active.add_time}}发布</view>
+    <view class="arrow"></view>
+  </view>
+
+  <view class="tab_wrap">
+    <view class="tab_nav" >
+      <view class="tab_text {{currentTab==0?'on':''}}" bindtap="changeCurrent" data-current="0">排行榜</view>
+      <view class="tab_text {{currentTab==1?'on':''}}" bindtap="changeCurrent" data-current="1">我的</view>
+    </view>
+  </view>
+
+  <view class="activity_con">
+    <block wx:if="{{currentTab == 0}}">
+      <view class="yulu_item yulu_rank" wx:for="{{opusList}}" >
+        <view class="persion_info">
+          <image src="{{item.avatarurl}}" class="rank_img"></image>
+          <view class="persion_name">
+            <text>{{item.wx_name}}</text>
+            <text class="yulu_time">{{item.add_time}}</text>
+          </view>
+        </view>
+
+        <view class="yulu_img">
+          <image bindtap="toDetail" src="{{item.picture}}" mode="widthFix"></image>
+        </view>
+        <text class="yu_text" bindtap="toDetail">{{item.content}}</text>
+        <view class="info_box">
+          <view class="bottom_bar">
+            <view class="like_box">
+              <block>
+                <view class="has_like" data-oid="{{item.oid}}" catchtap="likeYuLu" wx:if="{{item.isZan}}"></view>
+                <view class="like_btn" data-oid="{{item.oid}}" catchtap="unLikeYuLu" wx:else></view>
+              </block>
+              赞{{item.thumb}}
+            </view>
+
+           <view class="rank"><view class="rank_icon"></view>{{item.vote}}票</view>
+
+           <view class="vote_wrap">
+             <view class="vote_btn" data-oid="{{item.oid}}" wx:if="{{!item.isVote}}" bindtap="vote">投票</view>
+             <view class="vote_btn vote_hover" wx:else>已投票</view> 
+           </view>
+          </view>
+        </view>
+      </view>
+    </block>
+       <view  wx:else="{{currentTab == 1}}"> 
+         <block wx:if="{{!matchOpus}}">
+          <view class="join_desc">
+            <view>无论你是可爱小清新</view>
+            <view>还是红唇女王范儿</view>
+            <view>你是女神，缺你怎么行？</view>
+          </view>
+          <view class="join_activity" bindtap="join_active">参赛</view>
+        </block>
+        <block wx:else>
+           <view class="yulu_item">
+            <view class="persion_info">
+              <image src="{{avatarUrl}}"></image>
+                <view class="persion_name">
+                  <text>{{nickName}}</text>
+                  <text class="yulu_time">{{matchOpus.add_time}}</text>
+                </view>
+            </view>
+
+            <view class="yulu_img">
+              <image bindtap="toDetail" src="{{matchOpus.picture}}" mode="widthFix"></image>
+            </view>
+            <text class="yu_text" bindtap="toDetail">{{matchOpus.content}}</text>
+            <view class="info_box">
+              <view class="bottom_bar mine">
+                <view class="like_box">
+                  <block>
+                    <view class="has_like"></view>
+                  </block>
+                  赞{{matchOpus.thumb}}
+                </view>
+                 <view class="rank"><view class="rank_icon"></view>{{matchOpus.vote}}票</view>
+                <view class="opation_box">
+                  <button class="vote_btn" wx:if="{{matchOpus.status==1}}" open-type="share">拉票</button>
+                  <view class="vote_btn" wx:elif="{{matchOpus.status==0}}">审核中</view> 
+                  <view class="vote_btn" wx:else bindtap="join_active">审核未通过，重新上传</view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </block> 
+     </view> 
+  </view>
+  </scroll-view>
+</view>

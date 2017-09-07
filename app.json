@@ -1,0 +1,51 @@
+{
+  "pages":[
+    
+    "pages/index/index",
+    "pages/active/active",
+    "pages/activityDetail/activityDetail",
+    "pages/swiperPage/swiperPage",
+    "pages/guidePage/guidePage",
+    "pages/mostHot/mostHot",
+    "pages/writeYulu/writeYulu",
+    "pages/writeNewYulu/writeNewYulu",
+    "pages/myWorks/myWorks",
+    "pages/votePage/votePage",
+    "pages/LikeNotice/LikeNotice",
+    "pages/InputExpend/InputExpend",
+    "pages/LookYulu/LookYulu",
+    "pages/yuLuDetail/yuLuDetail",
+    "pages/myMoney/myMoney",
+    "pages/collect/collect",
+    "pages/mine/mine",
+    "pages/downLoad/downLoad",
+    "pages/lookDetail/lookDetail",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#addcff",
+    "navigationBarTitleText": "语录范",
+    "navigationBarTextStyle":"#fff"
+  },
+  "tabBar": {
+    "color": "#fff",
+    "backgroundColor": "#b4e0ff",
+    "selectedColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "语录",
+        "iconPath": "pages/img/home_home.png",
+        "selectedIconPath": "pages/img/home_home_hover.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "pages/img/home_mine.png",
+        "selectedIconPath": "pages/img/home_mine_hover.png"
+      }
+    ]
+  }
+}

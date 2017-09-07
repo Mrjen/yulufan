@@ -1,0 +1,30 @@
+<!--pages/mine/mine.wxml-->
+<view class="container">
+   <block wx:for="{{userInfo}}">
+      <image class="persion_img" src="{{item.avatarUrl}}"></image>
+      <block>
+        <text wx:if="{{userInfo[0].avatarUrl?true:false}}" class="persionName">{{item.nickName}}</text>
+        <view wx:else="" bindtap="toAuth" class="auth_btn">登录</view>
+      </block>
+    </block>
+    <view class="info_box" wx:for="{{persion_info}}">
+        <navigator class="info_works" url="../myWorks/myWorks" hover-class="none">
+            <text>{{item.opus_num}}</text>
+            <text>作品</text>
+        </navigator>
+        <navigator class="info_item"  url="../myMoney/myMoney" hover-class="none">
+          <text>{{item.profit}}</text>
+          <text>收益</text>
+        </navigator>
+        <navigator class="info_item"  url="../collect/collect" hover-class="none">
+          <text>{{item.collection_num}}</text>
+          <text>收藏</text>
+        </navigator>
+        <navigator class="info_item"  url="../LikeNotice/LikeNotice" hover-class="none">
+          <view class="notice" wx:if="{{item.unread_notice_num>0?true:false}}">{{item.unread_notice_num}}</view>
+          <text>{{item.notice_num}}</text>
+          <text>通知</text>
+        </navigator>
+    </view>
+    <view class="uploadWorks" bindtap="upWorks" url="" hover-class="none">上传作品</view>
+</view>

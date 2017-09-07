@@ -1,0 +1,399 @@
+/* pages/beforeLookYuLu/beforeLookYuLu.wxss */
+.container{
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  justify-content: flex-start;
+  background-image: -webkit-linear-gradient(0deg, #b2fffc 0, #96cfff 100%);
+  background-image: linear-gradient(90deg, #b2fffc 0, #96cfff 100%);
+}
+
+.yulu_item{
+  width: 680rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: #fff;
+  border-radius: 2rpx;
+  margin: 20rpx auto;
+  box-sizing: border-box;
+  padding:50rpx 30rpx;
+}
+
+.yulu_img{
+  width: 620rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin:30rpx auto 30rpx auto;
+  border-radius: 2rpx;
+  padding-bottom:80rpx;
+  border:1px solid #e5e5e5;
+}
+
+.yulu_img image{
+  width: 560rpx;
+  display: block;
+  margin:80rpx auto 50rpx auto;
+  border-radius: 2rpx;
+}
+
+.yu_text{
+  font-size:32rpx;
+  width: 560rpx;
+  line-height: 1.5;
+  margin:30rpx auto;
+  margin-bottom:100rpx;
+}
+
+.info_box{
+  display: flex;
+  justify-content: space-between;
+}
+
+.mark_box{
+  font-size: 20rpx;
+  align-self: flex-start;
+  color: #999;
+  display: flex;
+  align-items: center;
+}
+
+.mark_box::before{
+  content: "";
+  display: inline-block;
+  width: 30rpx;
+  height: 30rpx;
+  background-image:url('data:image/png;base64,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');
+  background-size: 30rpx 30rpx;
+  background-repeat: no-repeat;
+}
+
+.download_btn {
+  width:300rpx;
+  height:80rpx;
+  line-height:80rpx;
+  text-align:center;
+  background:#fff;
+  font-size:26rpx;
+  border-radius:6rpx;
+  color:#666;
+  margin:80rpx auto;
+}
+
+
+.persion_info {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.persion_info image {
+  display: block;
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.persion_name text{
+  font-size: 33rpx;
+  display: block;
+}
+
+.persion_name text:nth-of-type(1){
+  display:inline-block;
+  width:350rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.yulu_time{
+  color: #999;
+  font-size: 30rpx;
+}
+
+.like_box {
+  font-size: 28rpx;
+  width:160rpx;
+  display: flex;
+  justify-content:center;
+  color: #777;
+  align-items: center;
+}
+
+.opation_box {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+}
+
+.opation_box view {
+  flex:1;
+  color:#777;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  font-size: 28rpx;
+  height: 44rpx;
+  margin: 0 16rpx;
+}
+
+.opation_box .pay_btn::before {
+  content: "";
+  width:44rpx;
+  height: 44rpx;
+  display: inline-block;
+  margin-right: 10rpx;
+  background: url(https://yulufan.playonwechat.com/static/icon/home_money.png);
+  background-size: 100% 100%;
+}
+
+.opation_box .collect_btn::before {
+  content: "";
+  width:44rpx;
+  height: 44rpx;
+  display: inline-block;
+  margin-right: 10rpx;
+  background: url(https://yulufan.playonwechat.com/static/icon/home_collection.png);
+  background-size: 100% 100%;
+}
+
+.opation_box .has_collect::before {
+  content: "";
+  width:44rpx;
+  height: 44rpx;
+  display: inline-block;
+  margin-right: 10rpx;
+  background: url(https://yulufan.playonwechat.com/static/icon/home_has_collection.png);
+  background-size: 100% 100%;
+}
+
+.opation_box .down_btn::before {
+  content: "";
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+  background: url(https://yulufan.playonwechat.com/static/icon/home_download.png);
+  background-size: 100% 100%;
+}
+
+
+.bottom_bar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.like_btn {
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+  background: url(https://yulufan.playonwechat.com/static/icon/home_zan.png);
+  background-size: 100% 100%;
+}
+
+.has_like {
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+  background: url(https://yulufan.playonwechat.com/static/icon/home_has_zan.png);
+  background-size: 100% 100%;
+}
+
+/*打赏弹窗*/
+.pay_money_win, .other_win {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+ .other_win{
+   z-index: 3;
+ }
+
+.pay_money {
+  width: 600rpx;
+  height: 520rpx;
+  background: #fff;
+  border-radius: 10rpx;
+}
+
+.close.icon {
+  color: #666;
+  position: relative;
+  margin-top: 0;
+  margin-left: 0;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.close.icon:before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  width: 22px;
+  height: 1px;
+  background-color: currentColor;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.close.icon:after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  width: 22px;
+  height: 1px;
+  background-color: currentColor;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.close_box {
+  display: flex;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  padding: 20rpx 20rpx 0 0;
+}
+
+.money_log {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 10rpx auto;
+  margin-top: -32rpx;
+  background: url(https://yulufan.playonwechat.com/static/icon/home_money_win.png);
+  background-size: 100% 100%;
+}
+
+.money_num {
+  width: 500rpx;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 40rpx;
+}
+
+.money_num view {
+  width: 130rpx;
+  height: 60rpx;
+  font-size: 36rpx;
+  text-align: center;
+  line-height: 60rpx;
+  border: 1px solid #f96060;
+  position: relative;
+  margin: 10rpx auto;
+  color: #f96060;
+  border-radius: 10rpx;
+}
+
+.other_money {
+  width: 140rpx;
+  margin: 0 auto;
+  line-height: 40rpx;
+  height: 40rpx;
+  text-align: center;
+  color: #31c4eb;
+  font-size: 28rpx;
+  margin-top: 30rpx;
+}
+
+.money_tip {
+  font-size: 24rpx;
+  color: #999;
+  text-align: center;
+  margin-top: 50rpx;
+}
+
+.other_win_in {
+  width: 600rpx;
+  height: 388rpx;
+  background: #fbfbfd;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  padding: 20rpx;
+}
+
+.other_win_nav {
+  display: flex;
+  box-sizing: border-box;
+  padding-bottom: 30rpx;
+  position: relative;
+}
+
+.other_win_nav::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-bottom: 1px solid #eae9e8;
+  transform: scaleY(0.5);
+  transform-origin: 0 0;
+  pointer-events: none;
+}
+
+.other_title {
+  text-indent: -20rpx;
+  flex: 1;
+  text-align: center;
+}
+
+.money_input_box {
+  width: 538rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: #fff;
+  border: 1px solid #eae9e8;
+  margin-top: 40rpx;
+  display: flex;
+  align-items: center;
+}
+
+.money_input_box text {
+  display: inline-block;
+  line-height: 88rpx;
+  flex-shrink: 0;
+  text-indent: 20rpx;
+}
+
+.money_input_box input {
+  display: inline-block;
+  height: 88rpx;
+  flex: 1;
+  line-height: 88rpx;
+  margin-left: 20rpx;
+  font-size: 40rpx;
+}
+
+.pay_other_money {
+  width: 538rpx;
+  height: 88rpx;
+  text-align: center;
+  line-height: 88rpx;
+  color: #fff;
+  background: #04be02;
+  border-radius: 6rpx;
+  margin-top: 40rpx;
+}
+
+.zhanwei{
+  width: 750rpx;
+  height: 50rpx;
+}

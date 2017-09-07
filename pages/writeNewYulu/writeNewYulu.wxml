@@ -1,0 +1,11 @@
+<!--pages/writeYulu/writeYulu.wxml-->
+<view class="container">
+    <view class="main_box">
+      <textarea class="textText" cursor-spacing="80" style="top:{{box_height+100}}" bindinput="bindTextAreaBlur" placeholder="请输入语录 字数140以内" />
+ 
+      <view class="image_box upload_img" bindtap="upLoadImg"  style="height:{{box_height}}">
+          <image style="height:{{box_height}}" mode="widthFix" src="{{upLoadImg}}"></image>
+      </view>
+    </view>
+    <view class="upload_btn" bindtap="upLoadBtn">上传审核</view>
+</view>

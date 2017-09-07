@@ -1,0 +1,20 @@
+<!--pages/myWorks/myWorks.wxml-->
+<scroll-view scroll-y="true" class="container" bindscrolltolower="pageBottom">
+  <block  wx:for="{{myWorks}}">
+    <view data-oid="{{item.oid}}" data-status="{{item.status}}" hover-class="none" class="works_item"  catchtap="toWork">
+       <view class="picture_box">
+         <view class="pass_tip">{{item.status}}</view>
+         <image src="{{item.picture}}"></image>
+       </view>
+       <view class="works_right">
+           <view class="yulu_text">{{item.content}}</view>
+           <view class="opation_box">
+              <view>{{item.thumb}}人喜欢</view>
+              <view class="money_box">
+                <view class="money_icon"></view>赏：{{item.reward}}元
+              </view>
+           </view>
+       </view>
+    </view>
+    </block>
+</scroll-view>

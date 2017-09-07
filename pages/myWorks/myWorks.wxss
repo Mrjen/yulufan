@@ -1,0 +1,99 @@
+/* pages/myWorks/myWorks.wxss */
+
+.container {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  position: absolute;
+  justify-content: flex-start;
+  background-image: -webkit-linear-gradient(0deg, #b2fffc 0, #96cfff 100%);
+  background-image: linear-gradient(90deg, #b2fffc 0, #96cfff 100%);
+}
+
+.works_item {
+  display: flex;
+  width: 650rpx;
+  background: #fff;
+  margin: 20rpx 0;
+  overflow: hidden;
+  border-radius: 6rpx;
+}
+
+.works_item image {
+  display: block;
+  width: 248rpx;
+  flex-shrink: 0;
+  border-radius: 6rpx;
+}
+
+.yulu_text {
+  margin: 20rpx 0;
+  font-size: 32rpx;
+  line-height: 50rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.works_right {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.opation_box {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-right: 20rpx;
+  font-size: 26rpx;
+  margin-bottom: 20rpx;
+}
+
+.opation_box view:nth-of-type(1) {
+  font-size: 26rpx;
+}
+
+.opation_box view:nth-of-type(2) view {
+  display: inline-block;
+  width: 30rpx;
+  height: 30rpx;
+  background: url(https://yulufan.playonwechat.com/static/icon/mine_money.png);
+  background-size: 30rpx 30rpx;
+  margin-right: 14rpx;
+}
+
+.picture_box{
+  position: relative;
+  width: 228rpx;
+  height: 140rpx;
+  box-sizing:border-box;
+  margin:20rpx;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.money_box {
+  display: flex;
+  align-items: center;
+  line-height: 30rpx;
+}
+
+.pass_tip{
+  position: absolute;
+  width: 100rpx;
+  height: 40rpx;
+  background: rgba(0,0,0,.7);
+  color: #fff;
+  top: 0;
+  left: 0;
+  font-size: 18rpx;
+  line-height: 40rpx;
+  text-align: center;
+  border-radius: 4rpx 20rpx 20rpx 0;
+}

@@ -1,0 +1,39 @@
+/* pages/activityDetail/activityDetail.wxss */
+.container{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #eee;
+  padding: 30rpx 20rpx;
+  box-sizing: border-box;
+  color: #333;
+  display: block;
+}
+
+.detail_wrap{
+  background: #fff;
+  padding: 30rpx;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.detail_title{
+  width: 100%;
+  text-align: center;
+  font-size: 36rpx;
+  line-height: 60rpx;
+  margin-bottom: 30rpx;
+}
+
+.detail_con{
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+
+.detail_time{
+  font-size: 36rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  width: 100%;
+}

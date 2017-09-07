@@ -1,0 +1,10 @@
+/* pages/downLoad/downLoad.wxss */
+@import "../LookYulu/LookYulu.wxss";
+.container{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  justify-content: flex-start;
+  /*background-image: -webkit-linear-gradient(0deg, #b2fffc 0, #96cfff 100%);
+  background-image: linear-gradient(90deg, #b2fffc 0, #96cfff 100%);*/
+}

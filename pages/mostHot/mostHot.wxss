@@ -1,0 +1,2 @@
+/* pages/mostHot/mostHot.wxss */
+@import "../../pages/index/index.wxss";

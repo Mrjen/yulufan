@@ -1,0 +1,81 @@
+<!--pages/downLoad/downLoad.wxml-->
+
+<!--pages/LookYulu/LookYulu.wxml-->
+<scroll-view class="container" scroll-y="true">
+   <view  class="yulu_item" style="height:{{lineHeight+110}}rpx">
+     <view class="image_box">
+       <view class="img_out" style="height:{{imgHeight}}rpx">
+         <image class="picture" mode="widthFix" style="height:{{imgHeight}}" src="{{yuLu.picture}}"></image>
+         <text class="yu_text">{{yuLu.content}}</text>
+       </view>
+       <view class="line_box" style="height:{{lineHeight}}rpx"></view>
+     </view>
+     <view class="yulu_img">
+
+       <!-- <view wx:if="{{checkedData}}" class="date_box this_time">{{}}</view> -->
+       <view wx:if="{{checkedCode}}" class="date_box erwei_wrap">
+        <image class="erwei" src="{{yuLu.qrcode}}"></image>
+        <image src="{{avatarUrl}}" class="personImg"></image>
+       </view>
+       <view wx:if="{{checkedAuth}}" class="auth">{{wx_name}}</view>
+       <view class="mark_box">语录范@小程序 生成</view>
+     </view>
+
+
+   </view>
+   <view class="label_box">
+      <label class="radio" bindtap="checkedAuth">
+       <radio value="是否显示作者信息" checked="{{checkedAuth}}"/>是否显示本人信息
+     </label>
+     <!-- <label class="radio" bindtap="checkedData">
+      <radio value="是否显示作者信息" checked="{{checkedData}}"/>是否显示日期
+    </label> -->
+    <label class="radio" bindtap="checkedCode">
+      <radio value="是否显示小程序码" checked="{{checkedCode}}"/>是否显示小程序码
+    </label>
+     </view>
+
+   <view class="download_btn" bindtap="downLoad">保存到手机</view>
+   <view class="zhanwei"></view>
+ <view class="opation_box">
+    <view class="downLoad" bindtap="downLoadImg"></view>
+    <view class="copy" bindtap="copyBtn" data-yulu="{{yuLu.content}}"></view>
+    <view class="share"><button class="share_btn" open-type="share"></button></view>
+ </view>
+</scroll-view>
+
+
+
+
+
+
+
+
+
+
+<!-- <scroll-view class="container" scroll-y="true">
+   <view  class="yulu_item" wx:for="{{yuLu}}">
+     <view class="yulu_img">
+         <image mode="widthFix" src="{{item.picture}}"></image>
+         <text class="yu_text">{{item.content}}</text>
+         <view wx:if="{{checkedAuth}}" class="auth">— — {{wx_name}}</view>
+         <view wx:if="{{checkedData}}" class="date_box">{{thisTime}}</view>
+         <view wx:if="{{checkedCode}}" class="date_box erwei_wrap">
+          <image class="erwei" src="{{item.qrcode}}"></image>
+          <image src="{{avatarUrl}}" class="personImg"></image>
+         </view>
+    </view>
+     <view class="mark_box">语录范@小程序 生成</view>
+   </view>
+   <label class="radio" bindtap="checkedAuth">
+    <radio value="是否显示作者信息" checked="{{checkedAuth}}"/>是否显示本人信息
+  </label>
+  <label class="radio" bindtap="checkedData">
+   <radio value="是否显示作者信息" checked="{{checkedData}}"/>是否显示日期
+  </label>
+  <label class="radio" bindtap="checkedCode">
+    <radio value="是否显示小程序码" checked="{{checkedCode}}"/>是否显示小程序码
+  </label>
+   <view class="download_btn" bindtap="downLoad">保存到手机</view>
+   <view class="zuge"></view>
+</scroll-view> -->

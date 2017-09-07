@@ -1,0 +1,220 @@
+/* pages/LookYulu/LookYulu.wxss */
+.container{
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  justify-content: flex-start;
+  /*background-image: -webkit-linear-gradient(0deg, #b2fffc 0, #96cfff 100%);
+  background-image: linear-gradient(90deg, #b2fffc 0, #96cfff 100%);*/
+}
+
+.yulu_item{
+   margin-top: 36rpx;
+   box-shadow: 0 3px 8px 0 rgba(0,0,0,0.08) ;
+}
+
+.auth {
+  width:100%;
+  text-align:center;
+  margin-top:10rpx;
+  font-size:28rpx;
+  color: #5d5d5d;
+  box-sizing:border-box;
+  padding-right:30rpx;
+}
+
+.date_box {
+  color:#444;
+  text-align:left;
+  font-size:30rpx;
+}
+
+.date_box image.erwei{
+  width: 260rpx;
+  height: 260rpx;
+  display: block;
+  margin:0 auto;
+  margin-bottom: 20rpx;
+  border-radius: 0;
+}
+
+
+.yulu_img{
+  margin-top:60rpx;
+  line-height: 50rpx;
+  margin-bottom: 60rpx;
+}
+
+.image_box{
+  position: relative;
+}
+
+.img_out{
+  width: 642rpx;
+  margin:0 auto;
+}
+
+.picture{
+  width: 676rpx;
+  display: block;
+  margin:0 auto;
+  margin-top: 16rpx;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 2rpx;
+}
+
+.this_time{
+   position: absolute !important;
+   left: 0;
+   top: 30rpx;
+   transform: rotate(90deg);
+   z-index: 20;
+}
+
+.label_box{
+  margin-top: 100rpx;
+}
+
+.line_box{
+  width: 606rpx;
+  border:2px solid #333;
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  transform: translate(-50%);
+  top: -10rpx;
+}
+
+.yu_text{
+  font-size:32rpx;
+  width: 640rpx;
+  line-height: 1.5;
+  left: 50%;
+  transform: translate(-50%);
+  position:absolute;
+  z-index:7;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  box-sizing: border-box;
+  padding:20rpx 30rpx;
+  text-align: justify;
+  bottom: -20rpx;
+}
+
+.info_box{
+  display: flex;
+  justify-content: space-between;
+}
+
+.mark_box{
+  font-size: 22rpx;
+  color: #999;
+  height: 28rpx;
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mark_box::before{
+  content: "";
+  display: inline-block;
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 18rpx;
+  background-image:url('data:image/png;base64,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');
+  background-size: 30rpx 30rpx;
+  background-repeat: no-repeat;
+}
+
+.radio{
+  display: block;
+  box-sizing:border-box;
+  padding:10rpx 30rpx;
+}
+
+.download_btn {
+  width:300rpx;
+  height:80rpx;
+  line-height:80rpx;
+  text-align:center;
+  font-size:26rpx;
+  border-radius:6rpx;
+  color:#666;
+  margin:80rpx auto;
+  background:#96cfff;
+  color: #fff;
+}
+
+
+/*底部导航*/
+.opation_box{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  background: #9ed3ff;
+  z-index: 100;
+}
+
+.downLoad{
+  flex: 1;
+  background: url(https://yulufan.playonwechat.com/static/icon/LookYuLu_download.png);
+  background-size: 54rpx;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.copy{
+  flex: 1;
+  background: url(https://yulufan.playonwechat.com/static/icon/LookYuLu_copy.png);
+  background-size: 54rpx;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.share{
+  flex: 1;
+  background: url(https://yulufan.playonwechat.com/static/icon/LookYuLu_share.png);
+  background-size: 54rpx;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.share_btn{
+  display: block;
+  width: 100%;
+  height: 100rpx;
+  opacity: 0;
+  content: " ";
+}
+
+.zhanwei{
+  width: 750rpx;
+  height: 250rpx;
+}
+
+.date_box{
+  position: relative;
+}
+.erwei_wrap{
+  padding:0;
+  margin: 0;
+}
+.date_box image.personImg{
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50rpx;
+  margin-left: -50rpx;
+  border-radius: 50%;
+}

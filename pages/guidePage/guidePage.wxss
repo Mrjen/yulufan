@@ -1,0 +1,6 @@
+/* pages/guidePage/guidePage.wxss */
+image{
+  display: block;
+  width: 100%;
+  height: 6409rpx;
+}

@@ -1,0 +1,124 @@
+/* pages/LikeNotice/LikeNotice.wxss */
+.container{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding:0 20rpx;
+  position: absolute;
+  justify-content: flex-start;
+  background-image: -webkit-linear-gradient(0deg, #b2fffc 0, #96cfff 100%);
+  background-image: linear-gradient(90deg, #b2fffc 0, #96cfff 100%);
+}
+
+.works_item{
+  background: #fff;
+  width: 640rpx;
+  min-height: 200rpx;
+  margin:20rpx 0;
+  display: block;
+  overflow: hidden;
+  border-radius: 6rpx;
+}
+
+.works_item .img_box{
+  width: 228rpx;
+  height: 140rpx;
+  margin:20rpx;
+  overflow: hidden;
+}
+
+.works_item .yulu_img{
+   display: block;
+   width: 228rpx;
+   flex-shrink: 0;
+   border-radius: 6rpx;
+}
+
+.yulu_text{
+  margin:20rpx 0;
+  font-size: 32rpx;
+  line-height: 50rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.works_right{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-right: 20rpx;
+}
+.opation_box{
+  display: flex;
+  justify-content:space-between;
+  box-sizing: border-box;
+  padding-right: 20rpx;
+  font-size: 26rpx;
+  margin-bottom: 20rpx;
+}
+
+.opation_box view:nth-of-type(1){
+    font-size: 26rpx;
+}
+
+.opation_box view:nth-of-type(2) view{
+    display: inline-block;
+    width: 30rpx;
+    height: 30rpx;
+    background: url(https://yulufan.playonwechat.com/static/icon/mine_money.png);
+    background-size: 30rpx 30rpx;
+    margin-right: 14rpx;
+}
+
+.money_box{
+  display: flex;
+  align-items: center;
+  line-height: 30rpx;
+}
+
+.persion_time{
+  margin-top: 10rpx;
+}
+
+.persion_info{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 32rpx;
+  box-sizing: border-box;
+  padding: 20rpx;
+  padding-bottom: 0;
+}
+
+.persion_name{
+  display: flex;
+  justify-content: space-between;
+}
+
+.persion_name view:nth-of-type(1){
+  width:300rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.persion_info_right{
+  flex: 1;
+}
+
+.main_content{
+  display: flex;
+}
+
+.persion_img{
+  display: block;
+  width: 90rpx;
+  height: 90rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+  flex-shrink: 0;
+}

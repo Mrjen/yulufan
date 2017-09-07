@@ -1,0 +1,257 @@
+/* pages/activity/activity.wxss */
+.container{
+  width:100%;
+  display: block;
+  position:absolute;
+  justify-content:flex-start;
+  background-image:-webkit-linear-gradient(0deg, #b2fffc 0, #96cfff 100%);
+  background-image:linear-gradient(90deg, #b2fffc 0, #96cfff 100%);
+  padding:0 20rpx 130rpx;
+  box-sizing:border-box;
+  overflow-y: scroll;
+}
+
+.image_wrap{
+  width:680rpx;
+  height:400rpx;
+  margin-top:20rpx;
+  background-color:#fff;
+  border-radius:10rpx;
+  overflow:hidden;
+  box-sizing:border-box;
+  padding:14rpx;
+  margin: 0 auto;
+}
+
+.image_wrap image{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.navi_torule{
+  display: block;
+  height: 110rpx;
+  width: 680rpx;
+  position: relative;
+  padding: 10rpx 0;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.navigator-hover{
+  background: transparent;
+  opacity: 1;
+}
+
+.activity_rule{
+  font-size: 30rpx;
+  color: #333;
+  line-height: 60rpx;
+}
+
+.activity_rule2{
+  font-size: 26rpx;
+  color: #999;
+}
+
+.arrow{
+  position: absolute;
+  top: 50%;
+  right: 18rpx;
+  width: 26rpx;
+  height: 26rpx;
+  border: 1px solid #666;
+  transform: rotate(45deg);
+  border-bottom: none;
+  border-left: none;
+  margin-top: -15rpx;
+}
+
+.tab_wrap{
+  height: 80rpx;
+  width: 100%;
+  border-top: 1rpx solid #fff;
+  border-bottom: 1rpx solid #fff;
+  text-align: center;
+}
+
+.tab_nav{
+  font-size: 30rpx;
+  color: #333;
+  line-height: 80rpx;
+}
+
+.join_activity{
+  width:270rpx;
+  height:100rpx;
+  border-radius:8rpx;
+  background-image:-webkit-linear-gradient(-90deg, #b6e1ff 0, #94ceff 100%);
+  text-align:center;
+  line-height:98rpx;
+  color:#fff;
+  font-size: 38rpx;
+  margin: 200rpx auto 0;
+}
+
+
+/* 语录 */
+.yulu_item {
+  width: 680rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  margin: 20rpx auto;
+  box-sizing: border-box;
+  padding: 20rpx;
+  position: relative;
+}
+
+.yulu_img {
+  width: 640rpx;
+  height: 410rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 20rpx auto 20rpx auto;
+  border-radius: 2rpx;
+}
+
+.yulu_img image {
+  width: 640rpx;
+  display: block;
+  border-radius: 10rpx;
+}
+
+.info_box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.persion_info {
+  display: flex;
+  width: 100%;
+}
+
+.persion_info image {
+  display: block;
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.yu_text {
+  color: #333;
+  font-size: 34rpx;
+  display: inline-block;
+  margin-bottom: 50rpx;
+  line-height: 1.4;
+}
+
+.like_btn {
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+  background: url(https://yulufan.playonwechat.com/static/icon/home_zan.png);
+  background-size: 100% 100%;
+}
+
+.has_like {
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+  background: url(https://yulufan.playonwechat.com/static/icon/home_has_zan.png);
+  background-size: 100% 100%;
+}
+
+.persion_name text{
+  font-size: 33rpx;
+  display: block;
+}
+
+.persion_name text:nth-of-type(1){
+  display:inline-block;
+  width:350rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.yulu_time{
+  color: #999;
+  font-size: 30rpx;
+}
+
+.like_box {
+  font-size: 28rpx;
+   width:120rpx;
+  display: flex;
+  justify-content:center;
+  color: #777;
+  align-items: center;
+}
+
+.vote_btn{
+  /* width: 200rpx; */
+  height: 50rpx;
+  line-height: 50rpx;
+  background: red;
+  font-size: 28rpx;
+  color: #fff;
+  text-align: center;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+}
+
+.vote_hover{
+  background: #888;
+}
+
+.bottom_bar {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.opation_box{
+  margin-left: 50rpx;
+}
+
+.vote_wrap{
+  position: absolute;
+  bottom:72rpx;
+  right:8rpx;
+  color: #3da8f8;
+  font-size: 28rpx;
+  line-height: 50rpx;
+  transform: rotate(-25deg);
+}
+
+.btn_warp{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 750rpx;
+  text-align: center;
+}
+
+.btn_desc{
+  font-size: 28rpx;
+  color: #81b5ca;
+  line-height: 40rpx;
+  width: 100%;
+  text-align: center;
+}
+
+.btn_join{
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 36rpx;
+  color: #fff;
+  background: #addcff;
+}

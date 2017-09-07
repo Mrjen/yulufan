@@ -1,0 +1,74 @@
+<!--pages/beforeLookYuLu/beforeLookYuLu.wxml-->
+<scroll-view class="container" scroll-y="true">
+   <view  class="yulu_item" wx:for="{{yuLu}}">
+      <view class="persion_info">
+        <image src="{{item.avatarUrl}}"></image>
+          <view class="persion_name">
+            <text>{{item.wx_name}}</text>
+            <text class="yulu_time">{{item.add_time}}</text>
+          </view>
+      </view>
+     <view class="yulu_img">
+       <image mode="widthFix" src="{{item.picture}}"></image>
+       <text class="yu_text">{{item.content}}</text>
+     </view>
+
+      <view class="info_box">
+
+        <view class="bottom_bar" bindtap="scrollBtn">
+          <view class="like_box">
+            <block>
+              <view wx:if="{{item.isZan}}" data-oid="{{item.oid}}" catchtap="likeYuLu" class="has_like"></view>
+              <view wx:else="" data-oid="{{item.oid}}" catchtap="unLikeYuLu" class="like_btn"></view>
+            </block>
+            赞{{item.thumb}}
+          </view>
+          <view class="opation_box">
+              <view catchtap="payMoney" class="pay_btn"  data-oid="{{item.oid}}">赏{{item.reward_num}}</view>
+            <block>
+              <view wx:if="{{item.isCollect}}" data-oid="{{item.oid}}" class="has_collect" catchtap="hasCollect">收藏</view>
+              <view wx:else="" data-oid="{{item.oid}}" class="collect_btn" catchtap="collectBtn">收藏</view>
+            </block>
+            <view catchtap="downLoad" data-oid="{{item.oid}}" class="down_btn">下载</view>
+          </view>
+        </view>
+      </view>
+
+   </view>
+ <!--打赏金额弹窗-->
+      <view wx:if="{{payMoney}}"  class="pay_money_win">
+        <view class="pay_money">
+          <view class="close_box">
+            <view bindtap="colseMoneyWin" class="close icon"></view>
+          </view>
+          <view class="money_log"></view>
+          <view class="money_num">
+            <view bindtap="payNum" data-moe="0.16">0.16</view>
+            <view bindtap="payNum" data-moe="0.66">0.66</view>
+            <view bindtap="payNum" data-moe="1.68">1.68</view>
+            <view bindtap="payNum" data-moe="3.88">3.88</view>
+            <view bindtap="payNum" data-moe="5.20">5.20</view>
+            <view bindtap="payNum" data-moe="8.88">8.88</view>
+          </view>
+          <view class="other_money" bindtap="openOther">其他金额</view>
+          <view class="money_tip">注：赞赏是为了表示鼓励而对作者的无偿赠与</view>
+        </view>
+      </view>
+      <!-- 其他金额 -->
+      <view class="other_win" wx:if="{{payOther}}">
+        <view class="other_win_in">
+          <view class="other_win_nav">
+            <view bindtap="colseOther" class="close icon"></view>
+            <view class="other_title">其他金额</view>
+          </view>
+          <view class="money_input_box">
+            <text>金额(元)</text>
+            <input type="digit" bindinput="otherMoneyNum" placeholder="可填写1-256" />
+          </view>
+          <view class="pay_other_money" bindtap="payOtherMoney">赞赏</view>
+        </view>
+      </view>
+
+   <view class="download_btn" bindtap="downLoadImg">生成海报</view>
+ <view class="zhanwei"></view>
+</scroll-view>

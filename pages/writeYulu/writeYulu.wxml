@@ -1,0 +1,24 @@
+<!--pages/writeYulu/writeYulu.wxml-->
+<view class="container">
+  <form bindsubmit="formSubmit" report-submit="true">
+    <view class="main_box">
+      <!-- <view class="yu_tip">语录</view> -->
+      <textarea class="textText" cursor-spacing="80" style="top:{{box_height+100}}" maxlength="100" bindinput="bindTextAreaBlur" placeholder="请输入语录 字数100以内" />
+      <!-- <view class="yu_tip">图片</view> -->
+      <view class="image_box upload_img" bindtap="upLoadImg"  style="height:{{box_height}}">
+          <image style="height:{{box_height}}" mode="widthFix" src="{{upLoadImg}}"></image>
+      </view>
+      <!-- <view class="yu_tip">标签</view> -->
+      <!-- <view class="tag_box">
+         <view  wx:for="{{labelTag}}" class="label_tag {{item.static?'select_tag':''}}" data-id="{{item.id}}" data-text="{{item.tag}}" bindtap="selectTag">{{item.tag}}</view>
+      </view> -->
+      <radio-group class="radio-group" bindchange="radioChange">
+        <label class="radio" wx:for="{{labelTag}}">
+          <radio value="{{item.tag}}" bindtap="selectTag" checked="{{item.static}}"/>{{item.tag}}
+        </label>
+    </radio-group>
+    </view>
+    <button class="upload_btn"  formType="submit">上传审核</button>
+    <view class="upload_tip">注：审核通过之后会自动展示在最新语录</view>
+  </form>
+</view>

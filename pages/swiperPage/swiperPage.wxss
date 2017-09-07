@@ -1,0 +1,24 @@
+/* pages/swiperPage/swiperPage.wxss */
+page{
+  background-image: -webkit-linear-gradient(0deg, #b2fffc 0, #96cfff 100%);
+  background-image: linear-gradient(90deg, #b2fffc 0, #96cfff 100%);
+}
+
+.container image{
+  display: block;
+  width: 580rpx;
+  margin:0 auto;
+  margin-top: 20rpx;
+}
+
+.download{
+  width: 400rpx;
+  height: 80rpx;
+  background: #fff;
+  text-align: center;
+  line-height:80rpx;
+  margin:0 auto;
+  color: #444;
+  margin-top: 30rpx;
+  font-size: 32rpx;
+}

@@ -1,0 +1,5 @@
+<!--pages/swiperPage/swiperPage.wxml-->
+<view class="container">
+   <image src="{{imgSrc}}" mode="widthFix"></image>
+   <view bindtap="downLoad" class="download">下载图片到手机</view>
+</view>
